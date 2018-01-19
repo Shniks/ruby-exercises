@@ -9,15 +9,12 @@ class Unicorn
   end
 
   def white?
-    if color == "white"
-      true
-    else
-      false
-    end
+    return true if color == "white"
+    false
   end
 
   def say(words)
     "**;* #{words} **;*"
   end
-  
+
 end
