@@ -1,7 +1,8 @@
 class Hobbit
 
   attr_reader :name,
-              :disposition
+              :disposition,
+              :count
 
   def initialize(name, disposition = "homebody")
     @name = name
@@ -14,15 +15,15 @@ class Hobbit
   end
 
   def age
-    @count
+    count
   end
 
   def adult?
-    return true if @count > 32
+    return true if count > 32
   end
 
   def old?
-    return true if @count >= 101
+    return true if count >= 101
   end
 
   def has_ring?(name)
