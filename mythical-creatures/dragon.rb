@@ -8,21 +8,15 @@ class Dragon
     @name = name
     @color = color
     @rider = rider
-    @hungry = true
+    @count = 0
   end
 
   def hungry?
-    @hungry
+    @count < 3
   end
 
   def eat
-    
-
-
+    @count += 1
   end
-
-
-
-
 
 end
