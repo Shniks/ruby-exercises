@@ -8,6 +8,7 @@ class Hobbit
     @name = name
     @disposition = disposition
     @count = 0
+    @short = true
   end
 
   def celebrate_birthday
@@ -32,7 +33,7 @@ class Hobbit
   end
 
   def is_short?
-    true
+    @short
   end
 
 end
