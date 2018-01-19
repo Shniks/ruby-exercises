@@ -8,6 +8,7 @@ class Werewolf
     @location = location
     @human = true
     @wolf = true
+    @hungry = false
     @count = 0
   end
 
@@ -22,7 +23,13 @@ class Werewolf
   end
 
   def wolf?
-    @wolf
+    return @wolf = false if @count == 2
+    @wolf = true
+  end
+
+  def hungry?
+    return @hungry = true if @count == 1
+    @hungry = false
   end
 
 end

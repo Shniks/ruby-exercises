@@ -38,7 +38,9 @@ class WerewolfTest < Minitest::Test
 
   def test_when_starting_as_a_human_changing_a_second_time_it_becomes_human_again
     werewolf = Werewolf.new("David","London")
+
     assert werewolf.human?
+
     werewolf.change!
     werewolf.change!
 
@@ -46,23 +48,28 @@ class WerewolfTest < Minitest::Test
   end
 
   def test_when_starting_as_a_werewolf_changing_a_second_time_it_becomes_werewolf_again
-    
     werewolf = Werewolf.new("David","London")
     werewolf.change!
+
     assert werewolf.wolf?
+
     werewolf.change!
     werewolf.change!
+
     assert werewolf.wolf?
   end
 
   def test_is_not_hungry_by_default
-    skip
-    # your code here
+    werewolf = Werewolf.new("David","London")
+
+    refute werewolf.hungry?
   end
 
   def test_becomes_hungry_after_changing_to_a_werewolf
-    skip
-    # your code here
+    werewolf = Werewolf.new("David","London")
+    werewolf.change!
+
+    assert werewolf.hungry?
   end
 
   class Victim
