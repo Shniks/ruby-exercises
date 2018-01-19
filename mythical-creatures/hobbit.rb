@@ -18,11 +18,11 @@ class Hobbit
   end
 
   def adult?
-    true if @count > 32
+    return true if @count > 32
   end
 
   def old?
-    true if @count >= 101
+    return true if @count >= 101
   end
 
   def has_ring?(name)
