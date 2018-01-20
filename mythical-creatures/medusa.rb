@@ -9,7 +9,11 @@ class Medusa
   end
 
   def stare(victim)
-    victim.stoned = true
+    if statues.count >= 3
+      first_victim = statues.shift
+      first_victim.stoned = false
+    end
+    victim.stared_at
     statues << victim
   end
 
