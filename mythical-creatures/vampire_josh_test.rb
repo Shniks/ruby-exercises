@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'vampire_josh'
+require_relative 'vampire'
 
 class VampireTest < Minitest::Test
 
